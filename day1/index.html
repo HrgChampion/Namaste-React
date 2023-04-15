@@ -8,8 +8,72 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div id="root">Not Rendered</div>
-
+    <!-- <div id="root">Not Rendered</div> -->
+    <div class="relative vpr customVidPlayer">
+      <div class="error-msg">Browser not supported</div>
+      
+        
+                  
+                  
+                    <div class="jwnse" style="border-radius: 5px;padding: 2px;opacity:0.7;font-size:10px;background:white;z-index:5;position:absolute;top:65px;left:288px;text-align:center;">learn.namastedev.com<br>hgauba4@gmail.com<br>+919953275022</div><video playsinline="" disablepictureinpicture="" class="video-responsive bg-dark" autoplay="" poster="/s/videos/63cbc30ae4b09fa5f78fc095/cover?v=2" src="blob:https://learn.namastedev.com/422dca89-a705-48c1-94ef-d4fa881165ed"></video>
+                  
+        
+        
+      
+          <div class="video-controls" style="opacity: 1;">
+          <div class="middle">
+            <button class="material-icons seekbtn" type="button" id="replay-10">replay_10</button>
+            <button class="material-icons" type="button" id="play-pause">play_arrow</button>
+            <button class="material-icons seekbtn" type="button" id="forward-10">forward_10</button>
+          </div>
+          <div class="bottom">
+          <div id="seek-bar"><span class="buffer" style="width: 2.61368%;"></span><span class="bg-primary seekprogress" style="width: 0.0218976%;"></span></div>
+          <div class="columns p-1 col-gapless">
+            <div class="column col-6">
+              <b class="text-light"><span id="curr-time">00:00:02</span> / <span id="total-time">03:27:00</span></b>
+            </div>
+            <div class="column col-6 text-right">
+                  <button type="button" class="material-icons" id="mute">volume_up</button>
+                  <input class="slider" type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
+                <button type="button" class="material-icons" id="video-settings">settings</button>
+                  <button type="button" class="material-icons" id="full-screen">fullscreen</button>
+            </div>
+          </div>
+          </div>
+          </div>
+        <div id="settingsCont" class="absolute">
+          <ul class="menu main">
+            <li class="menu-item"><a href="javascript:void(0);" data-id="vidSpeedCont">Speed</a></li>
+            
+              <li class="menu-item"><a href="javascript:void(0);" data-id="vidQualityCont">Quality</a></li>
+            
+            
+          </ul>
+          <ul class="menu sub" id="vidSpeedCont">
+            <li class="menu-item border-bottom c-hand" style="padding-bottom: 0.5rem;" onclick="$(this).closest('.menu').hide().siblings('.main.menu').show();">&lt; <span class="float-right">Speed</span></li>
+            <li class="menu-item"><a href="javascript:void(0);" data-id="0.25">0.25</a></li>
+            <li class="menu-item"><a href="javascript:void(0);" data-id="0.5">0.5</a></li>
+            <li class="menu-item"><a href="javascript:void(0);" data-id="0.75">0.75</a></li>
+            <li class="menu-item active"><a href="javascript:void(0);" data-id="1">Normal</a></li>
+            <li class="menu-item"><a href="javascript:void(0);" data-id="1.25">1.25</a></li>
+            <li class="menu-item"><a href="javascript:void(0);" data-id="1.5">1.5</a></li>
+            <li class="menu-item"><a href="javascript:void(0);" data-id="2">2</a></li>
+          </ul>
+          <ul class="menu sub" id="vidQualityCont">
+    <li class="menu-item border-bottom c-hand" style="padding-bottom: 0.5rem;" onclick="$(this).closest('.menu').hide().siblings('.main.menu').show();">&lt; <span class="float-right">Video Quality</span></li>
+    <li class="menu-item active"><a href="javascript:void(0);" data-id="-1">Auto</a></li>
+    
+      <li class="menu-item"><a href="javascript:void(0);" data-id="0">Low</a></li>
+    
+      <li class="menu-item"><a href="javascript:void(0);" data-id="1">Medium</a></li>
+    
+      <li class="menu-item"><a href="javascript:void(0);" data-id="2">High</a></li>
+    
+</ul>
+          <ul class="menu sub" id="captionCont"></ul>
+        </div>
+        <div class="video-loader loading loading-lg" style="display: none;"></div>
+      </div>
     <script
       crossorigin
       src="https://unpkg.com/react@18/umd/react.development.js"
@@ -18,6 +82,6 @@
       crossorigin
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
     ></script>
-    <script src="App.js"></script>
+    <!-- <script src="App.js"></script> -->
   </body>
 </html>
